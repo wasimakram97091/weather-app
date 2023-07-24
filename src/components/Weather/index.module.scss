@@ -1,0 +1,160 @@
+.searchContainerWrapper {
+  padding: 20px 50px;
+  font-family: revert;
+  background-image: linear-gradient(#2c3e50, #fd746c);
+  color: #faf3f3;
+
+  @media only screen and (min-width: 280px) and (max-width: 574px) {
+    padding: 40px 15px;
+  }
+
+  &__searchContainer {
+    width: 100% !important;
+    display: flex;
+    column-gap: 60px;
+    justify-content: space-evenly;
+    @media only screen and (min-width: 280px) and (max-width: 574px) {
+      display: block;
+      column-gap: unset;
+      justify-content: unset;
+    }
+
+    &__child1 {
+      &__searchBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+
+        > input {
+          background-color: transparent;
+          color: #ffffff;
+          width: 300px;
+          @media only screen and (min-width: 280px) and (max-width: 574px) {
+            width: 200px;
+          }
+
+          :focus {
+            background-color: transparent;
+          }
+        }
+
+        input::-webkit-input-placeholder {
+          color: #ffffff;
+        }
+        &__btn {
+          border-radius: 5px;
+          font-size: 23px;
+          border: none;
+        }
+      }
+
+      &__cityName {
+        > h4 {
+          font-size: 18px;
+        }
+      }
+
+      &__temp {
+        > h2 {
+          font-size: 50px;
+          @media only screen and (min-width: 280px) and (max-width: 574px) {
+            font-size: 30px;
+          }
+        }
+      }
+
+      &__DayTime {
+        > p {
+          font-size: 20px;
+        }
+      }
+      &__h {
+        padding-top: 20px;
+        border-top: 2px solid;
+        padding-bottom: 20px;
+      }
+      &__icon {
+        text-align: center;
+
+        > img {
+          height: 100px;
+          @media only screen and (min-width: 280px) and (max-width: 574px) {
+            height: 70px;
+          }
+        }
+      }
+
+      &__nxtday {
+        height: 325px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+
+        @media only screen and (min-width: 280px) and (max-width: 574px) {
+          height: 200px;
+          overflow: hidden;
+          flex-direction: column;
+        }
+
+        &__child {
+          overflow-y: scroll;
+          @media only screen and (min-width: 280px) and (max-width: 574px) {
+            overflow-x: scroll;
+          }
+        }
+      }
+    }
+
+    &__child2 {
+      overflow: hidden;
+      &__parentHr {
+        overflow: hidden;
+        overflow-x: scroll;
+
+        &__hrDetails {
+          display: flex;
+          margin-bottom: 15px;
+          scroll-behavior: smooth;
+        }
+      }
+
+      &__h {
+        margin-bottom: 20px;
+        @media only screen and (min-width: 280px) and (max-width: 574px) {
+          margin: 20px 0px;
+        }
+      }
+      &__h2 {
+        margin: 30px 0px;
+        @media only screen and (min-width: 280px) and (max-width: 574px) {
+          margin: 20px 0px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  &__caption {
+    text-align: right;
+    @media only screen and (min-width: 280px) and (max-width: 574px) {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    > p {
+      font-size: 18px;
+      margin-bottom: 0;
+      font-weight: 600;
+      font-family: sans-serif;
+      color: #202932;
+      @media only screen and (min-width: 280px) and (max-width: 574px) {
+        font-size: 14px;
+      }
+
+      > i {
+        color: red;
+      }
+    }
+  }
+}
