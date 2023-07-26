@@ -7,6 +7,7 @@ import TodayHighlights from "./TodayHighlights/TodayHighlights";
 function Weather() {
   const [city, setCity] = useState("");
   const [data, setData] = useState();
+  const [cityName, setCityName] = useState("");
 
   let today = new Date();
   let tod = today.toLocaleString("default", { weekday: "short" });
@@ -39,6 +40,7 @@ function Weather() {
     const res = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}&exclude=minutely&units=metric`);
     const data = await res.json();
     setData(data);
+    setCityName(city);
   }
 
   // this API use for getting real address to show as default using lat and lon
@@ -52,6 +54,7 @@ function Weather() {
         // console.log(data);
 
         setCity(city);
+        setCityName(city);
       })
       .catch((error) => {
         console.error("Error fetching city name:", error);
@@ -109,7 +112,7 @@ function Weather() {
                 {data && (
                   <h4>
                     <span>
-                      <i className="fa-solid fa-location-dot"></i> {city}
+                      <i className="fa-solid fa-location-dot"></i> {cityName}
                     </span>
                   </h4>
                 )}
