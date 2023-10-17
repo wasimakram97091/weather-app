@@ -81,9 +81,9 @@ function TodayHighlights({ data }) {
               Sunrise & Sunset <i className="fa-solid fa-cloud-sun"></i>
             </h5>
             <div className={Styles.main__content__mid}>
-              <h3 className={Styles.main__content__mid__h3}>{formattedSunriseTime}</h3>
+              <h3 className={Styles.main__content__mid__h3}>{formattedSunriseTime} </h3>
             </div>
-            <h6 className={Styles.main__content__para}>{formattedSunsetTime}</h6>
+            <h6 className={Styles.main__content__para}>{formattedSunsetTime} </h6>
           </div>
         </div>
       </div>
